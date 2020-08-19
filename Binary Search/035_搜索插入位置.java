@@ -52,7 +52,7 @@ public class 搜索插入位置_35 {
                     left = mid;
                 }
             }
-            return right;
+            return nums[left]==target? left:right;
         }
     }
 
