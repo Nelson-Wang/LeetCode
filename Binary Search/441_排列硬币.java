@@ -44,9 +44,9 @@ public class 排列硬币_441 {
         int left = 1, right = n;
         while (left < right){
             int mid = left + (right-left+1)/2;
-            if ((mid * (mid+1))/2 == n){
+            if (((long)mid * (mid+1))/2 == n){
                 return mid;
-            }else if ((mid * (mid+1))/2 > n){
+            }else if (((long)mid * (mid+1))/2 > n){
                 right = mid -1;
             }else {
                 left = mid;
