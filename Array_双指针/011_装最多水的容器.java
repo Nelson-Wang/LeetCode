@@ -29,6 +29,9 @@ package module.双指针;
  */
 public class 装最多水的容器_11 {
     public static int maxArea(int[] height) {
+        if(height.length==0){
+            return 0;
+        }
         int i = 0;
         int j = height.length -1;
         int maxCapacity = (height[i]<height[j]?height[i]:height[j]) * (j-i);
