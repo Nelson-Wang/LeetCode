@@ -30,12 +30,15 @@ package typeMoudle.binarySearch;
  */
 public class 求平方根_69 {
     public static int mySqrt(int x) {
-        int left = 0, right = x;
+        if (x == 0){
+            return 0;
+        }
+        int left = 1, right = x;
         while (left < right-1){
             int mid = left + (right-left)/2;
-            if (mid * mid == x){
+            if ((long)mid * mid == x){
                 return mid;
-            }else if (mid * mid > x){
+            }else if ((long)mid * mid > x){
                 right = mid;
             }else {
                 left = mid;
@@ -45,7 +48,7 @@ public class 求平方根_69 {
     }
 
     public static void main(String[] args) {
-        int x = 80;
+        int x = 2147395599;
         System.out.println(mySqrt(x));
     }
 }
