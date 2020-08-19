@@ -26,12 +26,12 @@ package typeMoudle.binarySearch;
  */
 public class 检验完全平方数_367 {
     public static boolean isPerfectSquare(int num) {
-        int left = 0, right = num;
+        int left = 1, right = num;
         while (left <= right){
             int mid = left + (right-left)/2;
-            if (mid * mid == num){
+            if ((long)mid * mid == num){
                 return true;
-            }else if (mid * mid < num){
+            }else if ((long)mid * mid < num){
                 left = mid + 1;
             }else {
                 right = mid - 1;
