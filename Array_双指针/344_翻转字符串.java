@@ -27,21 +27,18 @@ package module.双指针;
  思路：使用双指针反向方法，i是左指针，j是右指针，从两头向中间移动，并交换arr[i]和arr[j]
  */
 public class 翻转字符串_344 {
-    public static char[] reserveString(char[] arr) {
-        int i = 0;
-        int j = arr.length-1;
-        while (i < j){
-            char tmp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = tmp;
-            i++;
-            j--;
+    public static void reverseString(char[] s) {
+        int left = 0, right = s.length - 1;
+        while (left < right) {
+            char tmp = s[left];
+            s[left++] = s[right];
+            s[right--] = tmp;
         }
-        return arr;
     }
 
     public static void main(String[] args) {
         char[] arr = {'h','e','l','l','o'};
-        System.out.println(reserveString(arr));
+        reserveString(arr)
+        System.out.println(arr);
     }
 }
