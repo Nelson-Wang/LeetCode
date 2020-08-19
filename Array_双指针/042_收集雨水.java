@@ -26,9 +26,6 @@ package module.双指针;
  */
 public class 收集雨水_42 {
     public static int trap(int[] height) {
-        if (height.length == 0){
-            return 0;
-        }
         int i = 0, j = height.length-1, level =0, res = 0;
         while (i < j){
             int lower = height[(height[i] < height[j]) ? i++ : j--];
