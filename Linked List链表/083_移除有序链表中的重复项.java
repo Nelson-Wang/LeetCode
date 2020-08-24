@@ -27,7 +27,7 @@ public class 移除有序链表中的重复项_83 {
     public static ListNode deleteDuplicates(ListNode head) {
         ListNode cur = head;
         while (cur != null && cur.next != null){
-            if (cur.val == cur.next.val){
+            while (cur != null && cur.next != null && cur.val == cur.next.val){
                 cur.next = cur.next.next;
             }
             cur = cur.next;
