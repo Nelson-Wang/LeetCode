@@ -26,6 +26,9 @@ package typeMoudle.linkedList;
  */
 public class 回文链表_234 {
     public static boolean isPalindrome(ListNode head) {
+        if (head == null){
+            return true;
+        } 
         ListNode slow = head, fast = head, start = head;
         while (fast != null && fast.next != null && fast.next.next != null){
             slow = slow.next;
