@@ -28,6 +28,7 @@ package typeMoudle.linkedList;
  */
 public class 链表的中间结点_876 {
     public static ListNode middleNode(ListNode head) {
+        if(head == null) return null;
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null){
             slow = slow.next;
