@@ -29,6 +29,7 @@ package typeMoudle.linkedList;
  */
 public class 奇偶链表_328 {
     public static ListNode oddEvenList(ListNode head) {
+        if(head == null) return null;
         ListNode odd = head, even = head.next, even_head = even;
         while (even != null && even.next != null){
             odd = odd.next = even.next;
