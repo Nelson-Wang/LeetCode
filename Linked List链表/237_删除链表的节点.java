@@ -36,6 +36,7 @@ package typeMoudle.linkedList;
  */
 public class 删除链表的节点_237 {
     public static void deleteNode(ListNode node) {
+        if (node == null) return;
         node.val = node.next.val;
         node.next = node.next.next;
     }
