@@ -31,9 +31,12 @@ package typeMoudle.linkedList;
  */
 public class 链表重排序_143 {
     public static void reorderList(ListNode head) {
+        if (head == null){
+            return;
+        }
         //查找中点
         ListNode slow = head, fast = head;
-        while (fast.next != null && fast.next.next != null){
+        while (fast != null && fast.next != null && fast.next.next != null){
             slow = slow.next;
             fast = fast.next.next;
         }
