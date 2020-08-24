@@ -27,7 +27,7 @@ package typeMoudle.双指针;
 public class 验证回文字符串_125 {
     public static boolean isPalindrome(String s) {
         int left = 0, right = s.length()-1;
-        while (left <= right){
+        while (left < right){
             if (!isNumAlph(s.charAt(left))){
                 left++;
                 continue;
@@ -47,7 +47,7 @@ public class 验证回文字符串_125 {
 
     public static boolean isNumAlph(char c){
         int num = (int)c;
-        if (num >= 48 && num <= 57 || num >= 65 && num <= 122){
+        if (num >= 48 && num <= 57 || num >= 65 && num <= 90 || num >= 97 && num <= 122){
             return true;
         }
         return false;
