@@ -13,11 +13,11 @@ public class Solution152 {
 
         for (int i=1; i<nums.length; i++){
             if (nums[i]<0){
-                f1[i] = Math.max((f2[i]-1)*nums[i], nums[i]);
-                f2[i] = Math.min((f1[i]-1)*nums[i], nums[i]);
+                f1[i] = Math.max((f2[i-1])*nums[i], nums[i]);
+                f2[i] = Math.min((f1[i-1])*nums[i], nums[i]);
             }else {
-                f1[i] = Math.max((f1[i]-1)*nums[i], nums[i]);
-                f2[i] = Math.min((f2[i]-1)*nums[i], nums[i]);
+                f1[i] = Math.max((f1[i-1])*nums[i], nums[i]);
+                f2[i] = Math.min((f2[i-1])*nums[i], nums[i]);
             }
         }
         int max = f1[0];
