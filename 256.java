@@ -3,7 +3,7 @@ package com;
 /**
  * Created by wWX945273 on 2020/12/9.
  */
-public class Solution265Star {
+public class Solution256Star {
     public int minCost(int[][] cost){
         if (cost.length==0) return 0;
         int[][] f = new int[cost.length+1][3];
