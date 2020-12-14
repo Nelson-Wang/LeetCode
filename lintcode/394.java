@@ -1,3 +1,9 @@
+package lintcode;
+
+/**
+ * Created by wWX945273 on 2020/12/14.
+ */
+public class Solution394 {
     public boolean firstWillWin(int n){
         boolean[] f = new boolean[n+1];
         f[0] = false;
@@ -9,3 +15,10 @@
         }
         return f[n];
     }
+
+    public static void main(String[] args) {
+        Solution394 solution394 = new Solution394();
+        boolean b = solution394.firstWillWin(4);
+        System.out.println(b);
+    }
+}
