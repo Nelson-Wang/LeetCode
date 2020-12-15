@@ -13,11 +13,16 @@ public class Solution92 {
         for (int j=1; j<m+1; j++){
             f[0][j] = false;
         }
+
         for (int i=1; i<n+1; i++){
-            for (int j=1; j<m+1; j++){
-                //前i-1个物品可以拼出w,则前i个物品可以拼出w，前i-1个物品可以拼出W-A[i-1],则前i个物品可以拼出W
-                if (f[i-1][j] || (j>=A[i-1] && f[i-1][j-A[i-1]])){
+            for (int j=0; j<m+1; j++){
+                if(j==0){
                     f[i][j] = true;
+                }else{
+                      //前i-1个物品可以拼出w,则前i个物品可以拼出w，前i-1个物品可以拼出W-A[i-1],则前i个物品可以拼出W
+                    if (f[i-1][j] || (j>=A[i-1] && f[i-1][j-A[i-1]])){
+                        f[i][j] = true;
+                    }                  
                 }
             }
         }
