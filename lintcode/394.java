@@ -5,6 +5,7 @@ package lintcode;
  */
 public class Solution394 {
     public boolean firstWillWin(int n){
+        if(n==0) return false;
         boolean[] f = new boolean[n+1];
         f[0] = false;
         f[1] = true;
