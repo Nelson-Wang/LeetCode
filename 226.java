@@ -1,0 +1,17 @@
+package com;
+
+/**
+ * Created by wWX945273 on 2021/1/8.
+ */
+public class Solution226 {
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null){
+            return null;
+        }
+        TreeNode right = invertTree(root.right);
+        TreeNode left = invertTree(root.left);
+        root.left = right;
+        root.right = left;
+        return root;
+    }
+}
