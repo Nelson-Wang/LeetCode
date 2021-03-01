@@ -7,7 +7,7 @@ import java.util.HashMap;
  */
 public class Solution12 {
     public String intToRoman(int num) {
-        String str = "";
+        StringBuffer sb = new StringBuffer();
         int i = 0;
         HashMap<Integer, String> map = new HashMap<>();
         map.put(1, "I");
@@ -30,12 +30,12 @@ public class Solution12 {
             num = remainder;
 
             while (discuss > 0) {
-                str += map.get(divisors[i]);
+                sb.append(map.get(divisors[i]));
                 discuss--;
             }
             i++;
         }
-        return str;
+        return sb.toString();
     }
 
     public static void main(String[] args) {
@@ -44,3 +44,4 @@ public class Solution12 {
         System.out.println(s);
     }
 }
+
