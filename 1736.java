@@ -8,7 +8,7 @@ public class Solution1736 {
         char[] chars = time.toCharArray();
         for (int i = 0; i < chars.length; i++){
             if (chars[0] == '?'){
-                if (chars[1] <'4' && chars[1] == '?'){
+                if (chars[1] <'4' || chars[1] == '?'){
                     chars[0] = '2';
                 }else {
                     chars[0] = '1';
